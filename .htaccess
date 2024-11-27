@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /bd/
+
+# Redirect root to home
+RewriteRule ^$ dashboard [L,R=301]
+
+# Handle other pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1 [L,QSA]

@@ -1,0 +1,44 @@
+.satudua {
+    position: relative; /* Untuk mengatur posisi gambar */
+    width: 100vw; /* Lebar 100% dari viewport */
+    height: 250px;
+    left: 50%; /* Menggeser gambar ke tengah */
+    transform: translateX(-50%); /* Memposisikan gambar di tengah */
+    overflow: hidden;
+    margin-top: -2rem;
+}
+.tiga {
+    position: relative; /* Untuk mengatur posisi gambar */
+    width: 100vw; /* Lebar 100% dari viewport */
+    left: 50%; /* Menggeser gambar ke tengah */
+    top: 50%;
+    transform: translate(-50%, -50%); /* Memposisikan gambar di tengah */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+/* Display the overlay */
+.overlay.show {
+    visibility: visible;
+}
+
+/* Preview image styling */
+#previewImage {
+    margin-left: 20px;
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
